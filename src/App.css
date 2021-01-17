@@ -1,0 +1,19 @@
+/* .main{
+    background-color: #FAFAFA;
+
+} */
+.firsthead{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+}
+.second_home{
+    margin-top: 60px;
+    background-color: #FAFAFA;
+    /* background-color: yellow; */
+    padding: 15px;
+    box-sizing: border-box;
+    min-height: calc(100vh - 60px)
+}

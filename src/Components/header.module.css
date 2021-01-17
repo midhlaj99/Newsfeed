@@ -1,0 +1,25 @@
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: #0d1117;
+    position: relative;
+}
+.backicon{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    /* background-color: red; */
+    width: 60px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+.text{
+    color: #c9d1d9;
+    font-size: 20px;
+}
