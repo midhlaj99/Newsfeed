@@ -8,8 +8,7 @@ import {setNewsData} from '../action/Newsaction'
 import Grid from '@material-ui/core/Grid';
 import styles from "./home.module.css"
 import Divider from '@material-ui/core/Divider';
-import Button from '@material-ui/core/Button';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+
 
 function DetailNews(){
     const history = useHistory();

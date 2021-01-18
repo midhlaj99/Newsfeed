@@ -25,19 +25,19 @@ export function ListAllNews(){
     }
 }
 
-export function SearchNews(search){
-    let keyword=search
-    return function(dispatch){
-        dispatch({type:'NEWS_REQUEST_INITIATE'})
+// export function SearchNews(search){
+//     let keyword=search
+//     return function(dispatch){
+//         dispatch({type:'NEWS_REQUEST_INITIATE'})
 
-        axios.get('https://api.nytimes.com/svc/search/v2/articlesearch.json?q='+keyword+'&api-key=VAqPW5YIBqPYAAjhNVi5K5VUeOh4fIAZ')
-            .then(response => {
-                // let data=response.data
-                dispatch({ type: 'NEWS_REQUEST_TERMINATE', payload: { NewsArray:response.data }})
+//         axios.get('https://api.nytimes.com/svc/search/v2/articlesearch.json?q='+keyword+'&api-key=VAqPW5YIBqPYAAjhNVi5K5VUeOh4fIAZ')
+//             .then(response => {
+//                 // let data=response.data
+//                 dispatch({ type: 'NEWS_REQUEST_TERMINATE', payload: { NewsArray:response.data }})
                 
-            })
-            .catch(err => {
-                dispatch({ type: 'NEWS_REQUEST_TERMINATE', payload: { NewsArray:[] }})
-            })
-    }
-}
+//             })
+//             .catch(err => {
+//                 dispatch({ type: 'NEWS_REQUEST_TERMINATE', payload: { NewsArray:[] }})
+//             })
+//     }
+// }

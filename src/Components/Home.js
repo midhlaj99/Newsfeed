@@ -55,7 +55,18 @@ function Home(){
     }
     const HandleChange=(event)=>{
         dispatch(setNewsData(event.target.name,event.target.value))
-        // dispatch(SearchNews(event.target.value))
+        let ser=event.target.value
+        if(ser===''){
+            dispatch(ListAllNews())
+        }
+        else{
+            let keyword=ser.charAt(0).toUpperCase() + ser.slice(1);
+
+            var matches = NewsArr.filter((val) => {
+                return val.title.includes(keyword)
+            })
+            dispatch(setNewsData('NewsArray',matches))
+        }
     }
     const style={marginTop:'30px'}
     return(
@@ -101,7 +112,7 @@ function Home(){
             {
                 NewsArr.length <1 ?
                 <div style={{width:'100%',textAlign:'center',marginTop:'20px'}}>
-                    <span style={{color:'red'}}>No Data,Try after Reload</span> 
+                    <span style={{color:'red'}}>No Data,Please Reload</span> 
                 </div>
                 :null
             }
