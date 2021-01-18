@@ -51,7 +51,7 @@ function Home(){
     const Showmore=(val,pic)=>()=>{
         dispatch(setNewsData('selected',val))
         dispatch(setNewsData('selectedpic',pic))
-        history.push('/details')
+        history.push('/details'+val.published_date)
     }
     const HandleChange=(event)=>{
         dispatch(setNewsData(event.target.name,event.target.value))
